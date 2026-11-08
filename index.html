@@ -1,11 +1,41 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Midterm Project</title>
+  <!--AI assistance used:
+Prompt: "Help me create a basic semantic HTML structure."-->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
-    
-</body>
-</html>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <!--The header contains the logo and navigation-->
+    <div class="wrapper header-inner">
+      <a href="#top" class="logo">
+        <img src="images/my-coffee-shop-logo.svg"
+             alt="My Coffee House home">
+      </a>
+
+      <nav aria-label="Main navigation">
+        <!--The <nav> helps identify the main navigation area,
+             while the <ul> organizes navigation links.-->
+        <ul class="nav-list">
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#locations">Locations</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
