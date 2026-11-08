@@ -249,3 +249,440 @@ paragraph has extra line spacing for readability. */
   color: var(--black);
   border-color: var(--white);
 }
+
+
+/* Coffee gallery introduction */
+
+.intro {
+  padding: 60px 0;
+}
+
+
+/* Small gold section headings */
+
+.eyebrow {
+  color: var(--gold-dark);
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+
+
+/* Introduction heading */
+
+.intro h2 {
+  font-size: 1.802rem;
+  line-height: 1.2;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+
+
+/* Coffee gallery mobile layout */
+
+.coffee-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+/* First image takes the full width */
+
+.coffee-gallery .gallery-main {
+  grid-column: 1 / -1;
+}
+
+/* All gallery images */
+
+.coffee-gallery img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 1 / 1;
+}
+
+
+/* Why Visit Us section */
+
+.offers {
+  padding: 60px 0;
+}
+
+
+/* Why Visit Us heading */
+
+.offers h2 {
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  line-height: 1.2;
+}
+
+.offers > .wrapper > .eyebrow {
+  text-align: center;
+}
+
+
+/* Mobile feature layout */
+
+.offer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+}
+
+
+
+/* Individual coffee features */
+
+.offer {
+  text-align: center;
+}
+
+.offer img {
+  display: block;
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  margin: 0 auto 20px;
+}
+
+.offer h3 {
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+
+.offer p {
+  line-height: 1.6;
+}
+
+
+/* About Us section */
+
+.about {
+  padding: 60px 0;
+}
+
+
+/* About Us mobile layout */
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+
+/* About Us image */
+
+.about-grid > img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+
+/* About Us text */
+
+.about-content h2 {
+  text-transform: uppercase;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.about-content p:not(.eyebrow) {
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+
+/* Black Learn More button */
+
+.button-dark {
+  background-color: var(--black);
+  color: var(--white);
+  border-color: var(--black);
+}
+
+/* 
+/* Testimonials section */
+
+.testimonials {
+  background-color: var(--black);
+  color: var(--white);
+  padding: 60px 0;
+}
+
+
+
+/* Testimonials heading */
+
+.testimonials h2 {
+  color: var(--white);
+  text-transform: uppercase;
+  line-height: 1.2;
+  margin-bottom: 30px;
+}
+
+
+/* Mobile testimonials layout */
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+
+/* Individual testimonial cards */
+
+.testimonial {
+  position: relative;
+  min-height: 400px;
+  padding: 30px 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  color: var(--white);
+}
+
+
+
+/* Testimonial background images */
+
+.testimonial-one {
+  background-image:
+    linear-gradient(
+      rgba(0, 0, 0, 0.25),
+      rgba(0, 0, 0, 0.75)
+    ),
+    url("../images/testimonial-1.jpeg");
+}
+
+.testimonial-two {
+  background-image:
+    linear-gradient(
+      rgba(0, 0, 0, 0.25),
+      rgba(0, 0, 0, 0.75)
+    ),
+    url("../images/testimonial-2.jpeg");
+}
+
+.testimonial-three {
+  background-image:
+    linear-gradient(
+      rgba(0, 0, 0, 0.25),
+      rgba(0, 0, 0, 0.75)
+    ),
+    url("../images/testimonial-3.jpeg");
+}
+
+
+/* Testimonial text */
+
+.testimonial blockquote {
+  margin: 0 0 15px;
+  line-height: 1.6;
+}
+
+.testimonial figcaption {
+  color: var(--gold);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+
+/* Footer */
+
+.site-footer {
+  background-color: var(--black);
+  color: var(--white);
+  text-align: center;
+  padding: 20px 0;
+}
+
+.site-footer p {
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+  /* Tablet CSS goes here */
+}
+
+
+/* Tablet layout - screens 768px and wider */
+
+@media screen and (min-width: 768px) {
+
+}
+
+
+.header-inner {
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.nav-list {
+  gap: 25px;
+}
+
+
+
+h1 {
+  font-size: 2.986rem;
+}
+
+h2 {
+  font-size: 2.488rem;
+}
+
+h3 {
+  font-size: 1.728rem;
+}
+
+
+
+.coffee-gallery {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.coffee-gallery .gallery-main {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.coffee-gallery img {
+  aspect-ratio: 1 / 1;
+}
+
+
+/* Tablet layout - screens 768px and wider */
+
+@media screen and (min-width: 768px) {
+
+  /* Header */
+  .header-inner {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .nav-list {
+    gap: 25px;
+  }
+
+  /* Heading sizes */
+  h1 {
+    font-size: 2.986rem;
+  }
+
+  h2 {
+    font-size: 2.488rem;
+  }
+
+  h3 {
+    font-size: 1.728rem;
+  }
+
+  /* Coffee gallery */
+  .coffee-gallery {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .coffee-gallery .gallery-main {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+
+  .coffee-gallery img {
+    aspect-ratio: 1 / 1;
+  }
+
+}
+
+@media screen and (min-width: 768px) {
+  /* Your Step 4A code */
+}
+
+/* Tablet: Why Visit Us */
+
+.offer-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+}
+
+
+/* Tablet: Menu and Locations */
+
+.discover-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 40px;
+}
+
+
+/* Tablet: About Us */
+
+.about-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 40px;
+  align-items: center;
+}
+
+
+/* Tablet: Testimonials */
+
+.testimonial-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.testimonial {
+  min-height: 350px;
+  padding: 20px 15px;
+}
+
+
+/* Add these inside your existing 768px media query */
+
+/* Why Visit Us */
+.offer-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+}
+
+/* Menu and Locations */
+.discover-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 40px;
+}
+
+/* About Us */
+.about-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 40px;
+  align-items: center;
+}
+
+/* Testimonials */
+.testimonial-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.testimonial {
+  min-height: 350px;
+  padding: 20px 15px;
+}
