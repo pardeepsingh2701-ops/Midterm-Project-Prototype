@@ -1,100 +1,251 @@
- /* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
+
+/* CSS for Coffee Shop Website
 */
+/*Ai helped me create the hero background,
+dark overlay, centered text, and button styling.*/
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+/* Define the colors used throughout the website */
+:root {
+  --gold: #d69e3d;
+  --gold-dark: #966f2c;
+  --black: #000000;
+  --white: #ffffff;
+  --cream: #f3f0e9;
 }
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
- {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  background-color: #f3f0e9;
-  color: #000000;
-}
-
 
 /* Basic page setup */
-
 * {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  background-color: #cac9c9;
-  color: #000000;
-}
-
-body {
+  background-color: var(--cream);
+  color: var(--black);
   font-family: 'Karla', sans-serif;
+  line-height: 1.6;
 }
 
-h1, h2, h3, nav {
+/* Headings and navigation use Lato */
+h1,
+h2,
+h3,
+nav {
   font-family: 'Lato', sans-serif;
 }
 
-/* Responsive gallery layout */
+/* Mobile font sizes */
+h1 {
+  font-size: 2.027rem;
+}
 
+h2 {
+  font-size: 1.802rem;
+}
+
+h3 {
+  font-size: 1.424rem;
+}
+
+p {
+  font-size: 1rem;
+}
+
+/* Keep section content within 1200px */
+.wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Mobile header */
+.site-header {
+  background-color: var(--black);
+  padding: 20px 0;
+}
+
+/* Arrange logo and navigation vertically */
+.header-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Keep logo responsive */
+.logo img {
+  display: block;
+  max-width: 100%;
+  width: 200px;
+  height: auto;
+}
+
+/* Mobile navigation */
+.nav-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Navigation links */
+.nav-list a {
+  color: var(--white);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+/* Navigation hover state */
+.nav-list a:hover {
+  color: var(--gold);
+}
+
+/* Keyboard focus state */
+.nav-list a:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 4px;
+}
+
+/* Responsive images */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Mobile coffee gallery */
 .coffee-gallery {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: .75rem;
+  gap: 0.75rem;
 }
 
+/* Make the first gallery image span both columns */
 .coffee-gallery .gallery-main {
   grid-column: 1 / -1;
 }
 
-/* Button interactions */
+/* Gallery image styling */
+.coffee-gallery img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
+/* Basic button styling */
+.button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: var(--white);
+  color: var(--black);
+  border: 2px solid transparent;
+  font-family: 'Karla', sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease,
+              color 0.3s ease,
+              border-color 0.3s ease,
+              transform 0.3s ease;
+}
+
+/* Button hover effect */
 .button:hover {
-  background: var(--gold);
+  background-color: var(--gold);
   border-color: var(--gold);
   color: var(--black);
   transform: translateY(-2px);
+}
+
+/* Button keyboard focus */
+.button:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 4px;
+}
+
+/* Button active state */
+.button:active {
+  background-color: var(--gold-dark);
+  border-color: var(--gold-dark);
+  color: var(--white);
+  transform: translateY(0);
+}
+
+/* Skip link for keyboard accessibility */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 10px;
+  padding: 10px;
+  background-color: var(--white);
+  color: var(--black);
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 10px;
+}
+
+
+/* Add the hero background image and overlay */
+
+
+/* Mobile hero section */
+
+.hero {
+  min-height: 550px;
+  background-image:
+    linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("../images/hero-background.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: var(--white);
+}
+
+/* Style the hero content The .hero-content rule adds vertical space around 
+the text.The h1 uses your required mobile heading size, and the 
+paragraph has extra line spacing for readability. */
+
+
+/* Position hero text */
+
+.hero-content {
+  width: 100%;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.hero h1 {
+  color: var(--white);
+  font-size: 2.027rem;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  color: var(--white);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+
+/* White button used in the hero */
+
+.button-light {
+  background-color: var(--white);
+  color: var(--black);
+  border-color: var(--white);
 }
