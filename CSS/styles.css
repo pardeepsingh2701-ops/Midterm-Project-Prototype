@@ -195,14 +195,16 @@ img {
 
 /* Mobile hero section */
 
+
 .hero {
   min-height: 550px;
+
   background-image:
     linear-gradient(
       rgba(0, 0, 0, 0.5),
       rgba(0, 0, 0, 0.5)
     ),
-    url("../Images/");
+    url("../Images/hero-background.jpg");
 
   background-size: cover;
   background-position: center;
